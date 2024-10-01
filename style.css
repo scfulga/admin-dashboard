@@ -9,6 +9,7 @@
     color: white;
 }
 
+
 @font-face{
     font-family: 'Fredoka';
     src: url(assets/Fredoka-VariableFont_wdth\,wght.ttf);
@@ -21,9 +22,10 @@ body{
 }
 .container{
     display: grid;
-    grid-template-rows: 0.7fr 3fr ;
-    grid-template-columns: 300px 4fr;
-    height: 100%;
+    grid-template-rows: 150px 3fr ;
+    grid-template-columns: minmax(300px, 1fr) 4fr;
+    min-height: 100%;
+    margin: 0;
 }
 
 .sidebar{
@@ -55,18 +57,24 @@ header{
 }
 .lower-nav{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr  1fr;
     min-width: 100%;
+    height: 100%;
 }
 .buttons{
     display: flex;
     justify-self: end;
     gap: 20px;
 }
+
+.greeting-container{
+    display: flex;
+    gap: 15px;
+}
 .searchbar{
     display: flex;
     background-color: white;
-    width: min(300px 80%);
+    width: min(500px, 80%);
     height: 25px;
     margin-left: 2em;
     border-radius: 15px;
@@ -95,8 +103,10 @@ header{
     display: grid;
     justify-content: center;
     grid-template-rows: 0.08fr 1fr 0.08fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     margin: 20px;
+    max-height: 800px;
 }
 .announcements{
     display: grid;
@@ -112,6 +122,7 @@ header{
     color: black;
     background-color: white;
     border-left: 7px #957FB8 solid; 
+    min-width: 180px;
     
 }
 .card-title{
@@ -123,6 +134,7 @@ header{
 .card-text{
     color: black;
     font-size: 18px;
+    margin-right: 3px;
 }
 
 .card-icons{
@@ -163,10 +175,19 @@ header{
     margin-left: 2rem;
 }
 
+
+.bigpfp{
+    width: 80px;
+    height: 80px;
+
+}
 .pfp{
-    background-color: blue;
     width: 50px;
     height: 50px;
+}
+.pfp , .bigpfp{
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 button{
@@ -192,15 +213,53 @@ button{
     height: 50px;
 }
 
-.section-title{
+.section-title,
+.an-title,
+.trending-title{
     font-size: 32px;
     font-weight: 500;
+}
+
+.an-title{
+    margin: 0;
+    margin-top: 20px;
+
+}
+
+.an-title,
+.trending-title{
+    font-size: 38px;
+}
+.section-title{
     margin: 20px;
 }
+
+.announcements{
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr; 
+    border-left: 7px #957FB8 solid; 
+}
+
+.an-text{
+    margin-top: 2px;
+
+}
+.an-text > *{
+    color: black;
+    margin: 0;
+    margin-left: 5px;
+}
+h3{
+    font-weight: 500;
+}
+
 
 .announcements,
 .trending,
 .card{
     border-radius: 10px;
 }
+
+
+
 
