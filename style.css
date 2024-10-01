@@ -1,34 +1,34 @@
-:root{
+:root {
     --black: #16161D;
     --dark-gray: #1F1F28;
     --gray: #717C7C;
 }
 
-*{
+* {
     font-family: Fredoka;
     color: white;
 }
 
-
-@font-face{
+@font-face {
     font-family: 'Fredoka';
     src: url(assets/Fredoka-VariableFont_wdth\,wght.ttf);
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
 }
-.container{
+
+.container {
     display: grid;
-    grid-template-rows: 150px 3fr ;
-    grid-template-columns: minmax(300px, 1fr) 4fr;
+    grid-template-rows: 160px 3fr;
+    grid-template-columns: minmax(325px, 1fr) 4fr;
     min-height: 100%;
     margin: 0;
 }
 
-.sidebar{
+.sidebar {
     display: flex;
     flex-direction: column;
     background-color: var(--black);
@@ -36,32 +36,44 @@ body{
     font-size: 2.5em;
 }
 
-header{
+#sidebar-title {
+    margin-left: 2.2rem;
+}
+
+header {
     display: grid;
     background-color: var(--dark-gray);
 }
-.upper-nav{
+
+.upper-nav {
     display: grid;
     grid-template-columns: 5px 1fr 1fr;
-    align-items: center; 
+    align-items: center;
 }
 
-.title{
+.title {
     width: 70%;
 }
-.user-upper-nav{
+
+.user-upper-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     justify-self: end;
     font-size: 20px;
     font-weight: 500;
-    margin-right: 5rem;
+    margin-right: 3rem;
+    margin-top: 5px;
 }
-.lower-nav{
+
+.lower-nav {
     display: grid;
-    grid-template-columns: 1fr  1fr;
+    grid-template-columns: 1fr 1fr;
     min-width: 100%;
     height: 100%;
 }
-.buttons{
+
+.buttons {
     display: flex;
     justify-self: end;
     gap: 20px;
@@ -69,12 +81,21 @@ header{
     margin-right: 3em;
 }
 
-.greeting-container{
+.greeting-container {
     display: flex;
     gap: 15px;
     width: 300px;
 }
-.searchbar{
+
+.greeting-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 2rem;
+}
+
+.searchbar {
     display: flex;
     background-color: white;
     width: min(500px, 80%);
@@ -83,26 +104,26 @@ header{
     border-radius: 15px;
 }
 
-.main-content{
+.main-content {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     background-color: #54546D;
-
 }
 
-.projects{
-    display: grid;      
+.projects {
+    display: grid;
     gap: 20px;
     margin: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
-.project-section{
+
+.project-section {
     display: grid;
     grid-template-rows: 0.08fr 1fr;
 }
 
-.news{
+.news {
     display: grid;
     justify-content: center;
     grid-template-rows: 0.08fr 1fr 0.08fr 1fr;
@@ -111,112 +132,135 @@ header{
     margin: 20px;
     max-height: 800px;
 }
-.announcements{
-    display: grid;
-    background-color: white; 
-    grid-template: 1fr 1fr 1fr / 1fr; 
-    border-left: 7px #957FB8 solid; 
 
-}
-.trending{
+.announcements,
+.trending {
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr / 1fr;
     background-color: white;
-    border-left: 7px #957FB8 solid; 
+    grid-template: 1fr 1fr 1fr / 1fr;
+    border-left: 7px #957FB8 solid;
+    border-radius: 10px;
 }
 
-.trending-profile{
+.trending-profile {
     display: flex;
     align-items: center;
-    gap: 10px;;
+    gap: 10px;
 }
 
-.trending-text{
+.trending-text {
     display: flex;
     flex-direction: column;
 }
 
-.trending-text > *{
-    color: black; 
+.trending-text > * {
+    color: black;
     margin: 0;
 }
 
-.card{
+.an-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 2px;
+}
+
+.an-text > * {
+    color: black;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.card {
     display: grid;
     grid-template-rows: 50px 1fr 50px;
     color: black;
     background-color: white;
-    border-left: 7px #957FB8 solid; 
-    min-width: 180px;
-    
+    border-left: 7px #957FB8 solid;
+    min-width: 140px;
+    border-radius: 10px;
 }
-.card-title{
+
+.card-title {
     color: black;
     font-weight: 500;
     font-size: 20px;
-}   
+    margin-left: 10px;
+}
 
-.card-text{
+.card-text {
     color: black;
     font-size: 18px;
     margin-right: 3px;
+    margin-left: 10px;
 }
 
-.card-icons{
+.card-icons {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     margin-right: 15px;
 }
 
-.card-icons > *{
+.card-icons > * {
     width: 30px;
     height: 30px;
 }
-.card-text,
-.card-title{
-    margin-left: 10px;
+
+.section-title,
+.an-title,
+.trending-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
 }
 
-
-#sidebar-title{
-    margin-left: 2.2rem;
-
+.an-title {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 38px;
 }
 
-#text-row{
-    display: grid;
+.trending-title {
+    font-size: 38px;
+}
+
+.section-title {
+    margin: 20px;
+}
+
+.text-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 5px;
     font-size: 29px;
     margin-bottom: 1em;
     list-style-type: none;
 }
 
-.greeting-text{
-    display: flex;
-    flex-direction: column;
-    font-size: 24px;
+h3 {
     font-weight: 500;
-    margin-left: 2rem;
 }
 
-
-.bigpfp{
-    width: 80px;
-    height: 80px;
-
-}
-.pfp{
+.pfp {
     margin-left: 10px;
     width: 50px;
     height: 50px;
 }
-.pfp , .bigpfp{
+
+.bigpfp {
+    width: 80px;
+    height: 80px;
+}
+
+.pfp,
+.bigpfp {
     vertical-align: middle;
     border-radius: 50%;
 }
 
-button{
+button {
     background-color: #54546D;
     border: none;
     border-radius: 20px;
@@ -226,62 +270,24 @@ button{
     font-weight: 500;
 }
 
-.icon{
+.icon {
     width: 25px;
     height: 25px;
     margin-right: 10px;
-    filter: invert(1);
     margin-left: 5px;
+    filter: invert(1);
 }
 
-.big-icon{
+.dashboard-title {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+}
+
+.big-icon {
     width: 50px;
     height: 50px;
-}
-
-.section-title,
-.an-title,
-.trending-title{
-    font-size: 32px;
-    font-weight: 500;
-}
-
-.an-title{
-    margin: 0;
-    margin-top: 20px;
-
-}
-
-.an-title,
-.trending-title{
-    font-size: 38px;
-}
-.section-title{
-    margin: 20px;
-}
-
-
-
-.an-text{
-    margin-top: 2px;
-
-}
-.an-text > *{
-    color: black;
-    margin: 0;
+    margin-right: 10px;
     margin-left: 5px;
+    filter: invert(1);
 }
-h3{
-    font-weight: 500;
-}
-
-
-.announcements,
-.trending,
-.card{
-    border-radius: 10px;
-}
-
-
-
-
