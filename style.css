@@ -133,12 +133,20 @@ header {
     max-height: 800px;
 }
 
-.announcements,
-.trending {
+.announcements {
     display: grid;
     background-color: white;
     grid-template: 1fr 1fr 1fr / 1fr;
     border-left: 7px #957FB8 solid;
+    border-radius: 10px;
+}
+
+.trending {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+    background-color: white;
+    border-left: 7px #957FB8 solid;
+    margin: 0;
     border-radius: 10px;
 }
 
@@ -156,19 +164,6 @@ header {
 .trending-text > * {
     color: black;
     margin: 0;
-}
-
-.an-text {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    margin-top: 2px;
-}
-
-.an-text > * {
-    color: black;
-    margin: 0;
-    margin-left: 5px;
 }
 
 .card {
@@ -205,28 +200,6 @@ header {
 .card-icons > * {
     width: 30px;
     height: 30px;
-}
-
-.section-title,
-.an-title,
-.trending-title {
-    font-size: 32px;
-    font-weight: 500;
-    margin: 0;
-}
-
-.an-title {
-    margin: 0;
-    margin-top: 20px;
-    font-size: 38px;
-}
-
-.trending-title {
-    font-size: 38px;
-}
-
-.section-title {
-    margin: 20px;
 }
 
 .text-row {
@@ -268,6 +241,25 @@ button {
     height: 40px;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #686A80;
+}
+
+li, .icon, img{
+    cursor: pointer;
+}
+
+li{
+    transition: background-color 0.3s ease;
+}
+
+li:hover{
+    color: #E0E0E0;
+    
 }
 
 .icon {
@@ -290,4 +282,39 @@ button {
     margin-right: 10px;
     margin-left: 5px;
     filter: invert(1);
+}
+
+.section-title,
+.an-title,
+.trending-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.an-title {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 38px;
+}
+
+.trending-title {
+    font-size: 38px;
+}
+
+.section-title {
+    margin: 20px;
+}
+
+.an-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 2px;
+}
+
+.an-text > * {
+    color: black;
+    margin: 0;
+    margin-left: 5px;
 }
